@@ -10,7 +10,7 @@ function ObtenerColaboradores() {
 }
 
 function ImprimirColaboradores(colaboradores) {
-  let contenedor = document.getElementById("cuerpoTabla");
+  let contenedor = document.querySelector(".parthner-name-box");
   contenedor.innerHTML = "";
 
   colaboradores.forEach(colaborador => {
@@ -19,10 +19,8 @@ function ImprimirColaboradores(colaboradores) {
 }
 
 function MapearColaborador(colaborador) {
-  return `<tr>
-    <td>${colaborador.id_Colaboradores}</td>
-    <td>${colaborador.nombre}</td>
-  </tr>`;
+  return `
+  <h3 class="parthner-name">${colaborador.nombre}</h3>`;
 }
 
 // Llama a la función para obtener y mostrar colaboradores al cargar la página
